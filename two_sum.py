@@ -24,3 +24,4 @@ class Solution(object):
                     if(nums[i]+nums[j]==target):
                         ans=[i,j]
                         return (ans)
+                    
