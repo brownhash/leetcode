@@ -24,24 +24,29 @@ Explanation: The answer is "wke", with the length of 3.
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         if(s):
-            temp=""
-            result =[]
-            for i in s:
-                if(i not in temp):
-                    temp+=i
-                    result.append(temp)
-                else:
-                    temp = ""
-                    temp += i
-                    result.append(temp)
-                
-            max = len(result[0])
-            elem = result[0]
+            result=[]
+            def check(i):
+                i = list(i)
+                for x in i:
+                    if(i.count(x) > 1):
+                        return(False)
+                return(True)
+
+            for i in range(0,len(s)):
+                temp = ""
+                temp+=s[i]
+                result.append(temp)
+                for j in range(i,len(s)):
+                    if(i!=j):
+                        temp += s[j]
+                        result.append(temp)
+            max = 0
             for i in result:
-                if(len(i) > max):
-                    max = len(i)
-                    elem = i
-        
+                data = check(i)
+                if(data == True):
+                    length = len(i)
+                    if(length > max):
+                        max = length
             return(max)
         else:
             return(0)
