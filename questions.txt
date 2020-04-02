@@ -10,6 +10,18 @@ Sample
 0 1 0
 Ans = 2
 
+solution:
+Concepts - BFS, GraphTheory
+Model the matrix as a graph where each cell is a node in the graph with edges to its four neighbours.
+Start a BFS simultaneously from each node having 1 in the initial matrix. These are the root nodes.
+The answer for this problem is the length of the longest path from any root node.
+
+No need for a distance matrix. Each traversal from a node to its neighbor has the same distance 
+(i.e. 1 time unit). Let's say you start from the root nodes. All the immediate neighbors are at distance 
+1 from the root node. Now, all the unvisited nodes from these neighbors are at distance 2 from the root node. 
+We will keep traversing the graph like this until all nodes are visited. The final answer will be equal to 
+the distance of the farthest node
+
 
 #2
 Description (asked in Direct i)
@@ -20,6 +32,12 @@ n length of array followed by n numbers
 5
 4 10 3 7 8
 Ans = 2
+
+solution:
+The first thing which comes to my mind after looking at the problem is dynamic programming but before that what is easy is recursion.
+Try implementing the solution using recursion and visualize the number of variables on which the solution for a sub-problem will depend.
+Take a recursive function as follows :
+Time Complexity : O( n ^ 3 )
 
 
 #3
@@ -38,6 +56,15 @@ Row = 2 (1 based indexing)
 Count = 3
 Explanation - 2nd row has max number of 0 and the count of max number of 0s is 3.
 
+solution:
+I think this problem can be solved with Binary Search.
+We can maintain a global max variable. We can traverse through all the rows applying binary search to each row trying to 
+find the position of the last 0 in that particular row.
+Time Complexity of Solution : n log (m) where n is the no. of rows and m is the no. of columns of the matrix. 
+
+We can start from index (0,0). If we encounter a 0, move right, else move down. While traversing in this way we can also 
+store the max right index of 0 reached, and row of that 0
+
 
 #4
 Description (Asked in Amazon)
@@ -49,6 +76,18 @@ Input : [-5, -3, 2, 3]
 Output : 2
 Input : [-3, -2, -1, 0]
 Output : -1
+
+solution:
+Hint : Binary Search. Try figuring out the solution from here though I am elaborating ahead in the same post.
+We can keep a start and an end variable and check the array element at mid = (start + end ) / 2 index of the array. 
+If this element is negative or is less than the index of the array, we are sure that we would find the element on the 
+right side of mid index, ie. between the mid index and the end index ( so we make start = mid + 1 and recalculate mid 
+just as we do in normal binary search). If in case the array element at mid index is greater than the index value, we 
+look to the left of mid, ie between start and mid ( we make end = mid - 1 and recalculate the value of mid). In this fashion 
+we keep going until we find our answer or we don't find anything and binary search terminates.
+Small Catch : If in case you find an index for which arr [ index ] == index, still move to the left because the question wants 
+the minimum such value of index for which arr[ index ] == index.
+Time Complexity : O ( log n ) where n is the array size.
 
 
 #5
@@ -62,6 +101,10 @@ Sample
 4 10 100
 X = 6
 Output - yes
+
+solution:
+This seems to be the standard dynamic programming question, can be solved with recursion + memoization or using iterative dynamic programming.
+Time Complexity : O( n * S )
 
 
 #6
