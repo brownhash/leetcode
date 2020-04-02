@@ -1,0 +1,160 @@
+#1
+Description (asked in Microsoft)
+There are n*m people in a binary matrix. 1 indicates they have corona virus and 0 indicates they dont have corona virus at t=0.
+At t = 1 , people having corona virus will spread the virus to its 4 neighbours (not the diagonal ones). At t = 2 the neighbours will spread further.
+At what second all of the people will be having corona virus.
+Difficulty - Medium
+Sample
+2*3 matrix
+1 0 0
+0 1 0
+Ans = 2
+
+
+#2
+Description (asked in Direct i)
+Given an array of numbers, you need to find length of longest increasing subsequence such that difference between consecutive elements is also in increasing order.
+Difficulty - Medium
+Sample
+n length of array followed by n numbers
+5
+4 10 3 7 8
+Ans = 2
+
+
+#3
+Description (asked in Grab)
+Given a binary matrix(containing only 0 and 1) of size n*m, such that each row in the matrix is sorted.
+We need to find the row with max number of 0 along with count of 0s.
+Difficulty - easy-medium
+Sample
+4 * 4 matrix
+0 1 1 1
+0 0 0 1
+0 0 1 1
+1 1 1 1
+Ans -
+Row = 2 (1 based indexing)
+Count = 3
+Explanation - 2nd row has max number of 0 and the count of max number of 0s is 3.
+
+
+#4
+Description (Asked in Amazon)
+Given a sorted array arr of distinct integers, return the lowest index i for which arr[ i ] = i. Return -1 if there is no such index.
+For example, given the array [ - 4, -3, 2, 3 ], return 2 since arr[ 2 ] == 2. Even though arr[ 3 ] == 3, we return 2 since it's the lowest index.
+Difficulty : Medium
+Sample I/O
+Input : [-5, -3, 2, 3]
+Output : 2
+Input : [-3, -2, -1, 0]
+Output : -1
+
+
+#5
+Description(Dunzo)
+Given a matrix where every row is sorted and every column is also sorted. Given a number X, return true if it is present in the matrix else return false.
+Difficulty - easy-medium
+Sample
+3*4
+1 3 5
+2 6 8
+4 10 100
+X = 6
+Output - yes
+
+
+#6
+Description(Bounce)
+You are given infinite supplies of n coins. Find number of ways to make sum S.
+Input
+3 coins
+2 3 5
+S = 9
+Output = 3 ([3,2,2,2],[3,3,3], [5,2,2])
+
+
+#7
+Asked in OLX interview (2 months ago )
+Given an array of integer , find length of longest subsequence such that elements in subsequence are continuious integers
+For example given the array [1, 9 ,3 ,10 , 4 ,20 ,2]
+The answer is 4
+Reason : 1,2,3,4 is longest consecutive subsequece although 9,10 is also consecutive subsequece of length 2 , but we have to print max length.
+Difficult :average
+Time complexity : O(n)
+
+
+#8
+Description(Amazon)
+There is a network of N router. every router is connected with every other router of the network through a direct link or via some other routers.
+we want to identify the routers which would result in a disconnected network if they went down and add replicas of these router to the network.
+write algo to identify all such router that needed to be connected to the network all the time.
+INPUT:
+numRouter: 7
+numLinks: 7
+links: [[1,2],[1,3][2,4],[3,4],[3,6],[6,7],[4,5]]
+OUTPUT:
+[3,4,6]
+
+
+#9
+Description(Google)
+There are N villages connected to each other via a pipe. You are given a matrix N*N matrix transferCost, where transferCost[i][j] represents the cost to transfer water from village i -> j(Cost of of i->j or j->i will be same). You are also given an array constructCost of size N where constructCost[i] represents cost to construct a well in village i. Any village which has well can supply water to itself with cost 0 and to other villages with cost of transfer. You need to find minimum cost such that each village gets water.
+Difficulty - Medium
+Sample:
+N number of villages, N sized array representing cost of constructing wells, N*N matrix representing cost to transfer water via pipes.
+2
+3 7
+2 0
+0 2
+Output:
+5 (Construct well in village 1 and use pipe 1->2 to get water to village 2)
+
+
+#11
+Description (Bounce)
+There are N people on instagram. You have given a boolean function f(x,y)
+f(x,y) = true (if x follows y)
+f(x,y) = false (if x doesnt follow y)
+You have to find celebrity among these N people. A celebrity is -
+1. who doesnt follow anyone.
+2. Everyone else follows him.
+Think input of your own.
+
+
+#12 (Recently asked in Amazon phone interview)
+You have an array of 0s & 1s such that 1 denotes a person sitting at that position & 0 is an empty place. You need to make m new people sit such that his maximum distance from the nearby 1s is minimum.
+Example - 1 0 0 0 0 0 1 -> then for m = 1 new person should be made to sit at pos 3 in the array since - min(max(3, 3)) => 3 for all the 0s here.
+
+
+#13
+Description(Google)
+Given an infinite chess. There is a knight initially at (x1,y1). Find the minimum number of steps it will take to reach (x2,y2).
+Also you are given a finite list of coordinates that are blocked(knight cannot go over there)
+Eg.
+Source at {0,0}
+Destination at {2,1}
+Coordinates blocked {(5,6)}
+
+
+#14
+Description(Linkedin screening round)
+Given an array of sorted characters and a character. Find the first index of next greater character. Print -1 if it doesnt exist.
+Eg.
+1. {a ,c, p, q, z} and character = k
+Ans = 2
+2. {c , d , f, z} and character = a
+ans = 0
+
+
+#16
+Description(Google)
+Given an array of sorted distinct integers. Return an sorted array that contains the squares of these numbers.
+Eg.
+I = {1,3,5}
+O = {1,9,25}
+
+
+#18
+Description(Interview Bit)
+Find number of nodes in a complete binary tree
